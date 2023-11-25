@@ -149,6 +149,12 @@ main {
     border-color: #000; /* Borde negro sólido al pasar el mouse */
 }
 
+#new-buttons button {
+    background-color: #00A651;
+    display: flex;
+    justify-content: space-around;
+}
+
 .start-btn:hover {
     transform: scale(1.1); /* Aumento de tamaño al pasar el mouse */
     border-color: #000; /* Borde negro sólido al pasar el mouse */

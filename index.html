@@ -25,21 +25,35 @@
         <div class="header-circle top-right"></div>
         <div class="header-circle bottom-left"></div>
         <div class="header-circle bottom-right"></div>
-        <p>Nuev@ jugador detectad@¿Listos para el siguiente nivel?</p>
+        <p id="text-to-remove">Nuev@ jugador detectad@¿Listos para el siguiente nivel?</p>
     </div>
 
-    <button class="start-btn">Start</button>
+    <button id="start-btn" class="start-btn" onclick="removeAndReplaceText('Mamá ¿Qué equipo eres?')">Start</button>
+    <div id="new-buttons" style="display: none;">
+        <button class="start-btn" onclick="selectTeam('mario')">Team Mario</button>
+        <button class="start-btn" onclick="selectTeam('peach')">Team Peach</button>
+    </div>
 
-    <main>
-        
+    <main id="main-content">
+    
         <section class="character">
             <img src="https://myplayertwo.files.wordpress.com/2015/04/4061_paper-mario-prev.png" alt="Paper Mario">
         </section>
 
         <section class="character">
             <img src="https://64.media.tumblr.com/511e4ca88530be4a501bed917ee02c88/b042ccbccdfe556b-73/s1280x1920/4448d5150c1e4ade29ebbe4df2977357b3b57756.png" alt="Princess Peach">
-        </section>        
+        </section>       
+
+        <audio id="background-music" autoplay loop>
+            <source src="assets/mario_theme.mp3" type="audio/mp3" />
+        </audio>
+        
     </main>
+
+    <div class="image-container" id="image-container">
+        <!-- Aquí se mostrará la imagen o el video -->
+    </div>
+
 
     <script src="script.js"></script>
 </body>
