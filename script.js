@@ -23,6 +23,11 @@ contentCircles.forEach(circle => {
 });
 
 function removeAndReplaceText(newTextReplacement) {
+
+    if (contador == 1) {
+        playSound();
+    }
+
     const textToRemove = document.getElementById('text-to-remove');
     textToRemove.style.transform = 'scale(1.5)';
     textToRemove.style.transition = 'transform 1s ease-out, opacity 1s ease-out';
@@ -48,6 +53,7 @@ function removeAndReplaceText(newTextReplacement) {
 
 function selectTeam(team) {
     console.log('Selected team:', team);
+    playSound();
     if (contador <= 2) {
         removeAndReplaceText('Papá ¿Qué equipo eres?')
     }else{
@@ -55,6 +61,11 @@ function selectTeam(team) {
         removeAndReplaceText('Y la respuesta es...')        
     }
     // Aquí puedes añadir la lógica para manejar la selección de equipo
+}
+
+function playSound() {
+    var audio = document.getElementById("click-sound");
+    audio.play();
 }
 
 function showImageAndVideo() {
